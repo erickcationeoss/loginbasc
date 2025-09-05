@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('login-form');
-    const errorMessage = document.getElementById('error-message');
     const loginScreen = document.getElementById('login-screen');
     const contentScreen = document.getElementById('content');
     const logoutBtn = document.getElementById('logout-btn');
@@ -25,8 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`Bem-vindo, ${username}! Acesso concedido ao sistema.`);
         } else {
             // Login falhou
-            errorMessage.textContent = 'Usuário ou senha incorretos!';
-            errorMessage.style.display = 'block';
+            alert('Usuário ou senha incorretos!');
             
             // Efeito de erro
             loginForm.classList.add('error-animation');
@@ -41,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         contentScreen.classList.add('hidden');
         loginScreen.classList.remove('hidden');
         loginForm.reset();
-        errorMessage.style.display = 'none';
         
         // Mostrar alerta de logout
         alert('Logout realizado com sucesso!');
@@ -61,4 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(style);
+    
+    // Adicionar delay sequencial para animações de fade-in
+    document.querySelectorAll('.fade-in').forEach((element, index) => {
+        element.style.animationDelay = `${index * 0.2}s`;
+    });
 });

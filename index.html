@@ -3,128 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Retro | RS History</title>
+    <title>Acesso | Sistema</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="scanlines"></div>
+    <div class="background-animation"></div>
+    
     <div class="container">
         <!-- Tela de Login -->
-        <div id="login-screen">
-            <div class="logo">
-                <h1>RETRO ACCESS</h1>
-                <p>Entre com suas credenciais</p>
+        <div id="login-screen" class="fade-in">
+            <div class="logo-container">
+                <div class="logo">ACESSO</div>
+                <p class="tagline">Sistema exclusivo</p>
             </div>
             
-            <form id="login-form">
+            <form id="login-form" class="form-elegant">
                 <div class="input-group">
-                    <label for="username">Usuário</label>
                     <input type="text" id="username" name="username" required>
+                    <label for="username">Usuário</label>
+                    <div class="input-line"></div>
                 </div>
                 
                 <div class="input-group">
-                    <label for="password">Senha</label>
                     <input type="password" id="password" name="password" required>
+                    <label for="password">Senha</label>
+                    <div class="input-line"></div>
                 </div>
                 
-                <button type="submit" class="btn">ACESSAR SISTEMA</button>
+                <button type="submit" class="btn-login">ENTRAR</button>
             </form>
-            
-            <div id="error-message" class="error"></div>
         </div>
         
         <!-- Conteúdo após login (inicialmente oculto) -->
         <div id="content" class="hidden">
-            <header>
-                <h1>HISTÓRIA DO RIO GRANDE DO SUL</h1>
-                <button id="logout-btn" class="btn">SAIR</button>
+            <header class="content-header">
+                <div class="header-content">
+                    <h1>HISTÓRIA DO RIO GRANDE DO SUL</h1>
+                    <button id="logout-btn" class="btn-logout">SAIR</button>
+                </div>
             </header>
             
-            <main>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">1737</div>
-                        <div class="timeline-content">
-                            <h3>Fundação do Rio Grande</h3>
-                            <p>Brigadeiro José da Silva Pais funda a cidade do Rio Grande, primeiro núcleo de povoamento português na região.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">1750</div>
-                        <div class="timeline-content">
-                            <h3>Tratado de Madrid</h3>
-                            <p>Estabelece os limites entre as possessões portuguesas e espanholas na América do Sul.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">1835</div>
-                        <div class="timeline-content">
-                            <h3>Revolução Farroupilha</h3>
-                            <p>Início da rebelião que proclamou a República Rio-Grandense, liderada por Bento Gonçalves.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">1845</div>
-                        <div class="timeline-content">
-                            <h3>Paz de Ponche Verde</h3>
-                            <p>Fim da Revolução Farroupilha com a reintegração do Rio Grande do Sul ao Império do Brasil.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">1893</div>
-                        <div class="timeline-content">
-                            <h3>Revolução Federalista</h3>
-                            <p>Conflito entre federalistas (maragatos) e republicanos (pica-paus) pelo controle do estado.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">1923</div>
-                        <div class="timeline-content">
-                            <h3>Revolução de 1923</h3>
-                            <p>Confronto entre assisistas e borgistas pelo poder político no estado.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-year">1930</div>
-                        <div class="timeline-content">
-                            <h3>Revolução de 1930</h3>
-                            <p>Movimento liderado por Getúlio Vargas, gaúcho de São Borja, que culminou com a tomada do poder federal.</p>
-                        </div>
+            <main class="content-main">
+                <div class="hero-section">
+                    <div class="hero-content fade-in">
+                        <h2>Terra de tradição e cultura</h2>
+                        <p>O Rio Grande do Sul possui uma história rica e uma identidade cultural única no Brasil.</p>
                     </div>
                 </div>
                 
-                <div class="culture-section">
+                <div class="large-container fade-in">
+                    <h2>Origens</h2>
+                    <p>O povoamento do Rio Grande do Sul iniciou-se com a chegada de jesuítas espanhóis e portugueses que fundaram os Sete Povos das Missões. A região tornou-se estratégica para Portugal durante o período colonial, resultando em disputas territoriais com a Espanha.</p>
+                </div>
+                
+                <div class="large-container fade-in">
+                    <h2>Revolução Farroupilha</h2>
+                    <p>Entre 1835 e 1845, ocorreu a mais longa rebelião do período regencial brasileiro, a Revolução Farroupilha. Liderados por Bento Gonçalves, os farrapos proclamaram a República Rio-Grandense em 1835, buscando maior autonomia política e econômica.</p>
+                </div>
+                
+                <div class="large-container fade-in">
                     <h2>Cultura Gaúcha</h2>
-                    <div class="culture-grid">
-                        <div class="culture-item">
-                            <div class="culture-icon">🐎</div>
-                            <h3>Tradição Equestre</h3>
-                            <p>O cavalo é parte fundamental da cultura gaúcha, presente no trabalho campeiro e nas competições.</p>
-                        </div>
-                        
-                        <div class="culture-item">
-                            <div class="culture-icon">🍖</div>
-                            <h3>Churrasco</h3>
-                            <p>Técnica culinária típica que se tornou uma das marcas mais conhecidas do Rio Grande do Sul.</p>
-                        </div>
-                        
-                        <div class="culture-item">
-                            <div class="culture-icon">🎵</div>
-                            <h3>Música</h3>
-                            <p>Vanera, milonga e chamamé são alguns dos ritmos tradicionais que animam os fandangos.</p>
-                        </div>
-                    </div>
+                    <p>A cultura do estado é marcada pelas tradições campeiras, com forte influência europeia, especialmente de alemães, italianos e portugueses. O chimarrão, o churrasco, a música regional e as festas tradicionais como a Semana Farroupilha são elementos centrais dessa identidade cultural.</p>
+                </div>
+                
+                <div class="large-container fade-in">
+                    <h2>Desenvolvimento Econômico</h2>
+                    <p>O Rio Grande do Sul se consolidou como um importante polo industrial e agrícola do país, com destaque para a produção de grãos, carne, calçados e tecnologia. A qualidade de vida no estado está entre as melhores do Brasil, com índices sociais acima da média nacional.</p>
                 </div>
             </main>
             
-            <footer>
-                <p>Sistema Retro - História do RS © 2023</p>
+            <footer class="content-footer">
+                <p>Sistema de acesso exclusivo © 2023</p>
             </footer>
         </div>
     </div>
