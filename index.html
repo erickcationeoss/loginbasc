@@ -3,30 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Login</title>
+    <title>Login Retro | RS History</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form id="login-form">
-            <div class="input-group">
-                <label for="username">Usuário:</label>
-                <input type="text" id="username" name="username" required>
+    <div class="scanlines"></div>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div id="login-screen">
+            <div class="logo">
+                <h1>RETRO ACCESS</h1>
+                <p>Entre com suas credenciais</p>
             </div>
-            <div class="input-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
-        <p id="error-message" class="error"></p>
-    </div>
-
-    <div id="welcome-page" class="hidden">
-        <h1>Bem-vindo, <span id="user-name">Erick</span>!</h1>
-        <p>Você fez login com sucesso no sistema.</p>
-        <button id="logout-btn">Sair</button>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn">ACESSAR SISTEMA</button>
+            </form>
+            
+            <div id="error-message" class="error"></div>
+        </div>
+        
+        <!-- Conteúdo após login (inicialmente oculto) -->
+        <div id="content" class="hidden">
+            <header>
+                <h1>HISTÓRIA DO RIO GRANDE DO SUL</h1>
+                <button id="logout-btn" class="btn">SAIR</button>
+            </header>
+            
+            <main>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1737</div>
+                        <div class="timeline-content">
+                            <h3>Fundação do Rio Grande</h3>
+                            <p>Brigadeiro José da Silva Pais funda a cidade do Rio Grande, primeiro núcleo de povoamento português na região.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1750</div>
+                        <div class="timeline-content">
+                            <h3>Tratado de Madrid</h3>
+                            <p>Estabelece os limites entre as possessões portuguesas e espanholas na América do Sul.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1835</div>
+                        <div class="timeline-content">
+                            <h3>Revolução Farroupilha</h3>
+                            <p>Início da rebelião que proclamou a República Rio-Grandense, liderada por Bento Gonçalves.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1845</div>
+                        <div class="timeline-content">
+                            <h3>Paz de Ponche Verde</h3>
+                            <p>Fim da Revolução Farroupilha com a reintegração do Rio Grande do Sul ao Império do Brasil.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1893</div>
+                        <div class="timeline-content">
+                            <h3>Revolução Federalista</h3>
+                            <p>Conflito entre federalistas (maragatos) e republicanos (pica-paus) pelo controle do estado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1923</div>
+                        <div class="timeline-content">
+                            <h3>Revolução de 1923</h3>
+                            <p>Confronto entre assisistas e borgistas pelo poder político no estado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1930</div>
+                        <div class="timeline-content">
+                            <h3>Revolução de 1930</h3>
+                            <p>Movimento liderado por Getúlio Vargas, gaúcho de São Borja, que culminou com a tomada do poder federal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="culture-section">
+                    <h2>Cultura Gaúcha</h2>
+                    <div class="culture-grid">
+                        <div class="culture-item">
+                            <div class="culture-icon">🐎</div>
+                            <h3>Tradição Equestre</h3>
+                            <p>O cavalo é parte fundamental da cultura gaúcha, presente no trabalho campeiro e nas competições.</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <div class="culture-icon">🍖</div>
+                            <h3>Churrasco</h3>
+                            <p>Técnica culinária típica que se tornou uma das marcas mais conhecidas do Rio Grande do Sul.</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <div class="culture-icon">🎵</div>
+                            <h3>Música</h3>
+                            <p>Vanera, milonga e chamamé são alguns dos ritmos tradicionais que animam os fandangos.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer>
+                <p>Sistema Retro - História do RS © 2023</p>
+            </footer>
+        </div>
     </div>
 
     <script src="script.js"></script>
